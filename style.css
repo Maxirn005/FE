@@ -1,0 +1,509 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+body{
+font-size: 1.2rem;
+font-family:'Anton', sans-serif ;
+text-align: center;
+min-height: 100%;
+
+}
+
+.grid-container > * {
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-bar{
+    grid-area: nav-bar;
+    background-color: black;
+    padding: 10px;  
+    text-align: right; 
+    color:beige;
+   
+    
+}
+.header{
+    grid-area: header;
+    font-size: 50px;
+    color:rgb(226, 142, 31);
+    background-color: aqua;     
+}
+.transformacion{
+    overflow: hidden;
+    height: 70px;
+
+}
+span{
+    display: flex;
+    height: 100%;
+    padding-left: 7px;
+    animation:cambiar 8s infinite;
+
+}
+@keyframes cambiar {
+    0%{transform:translateY(-112%)}
+    15%{transform:translateY(-100%)}
+    25%{transform:translateY(-212%)}
+    35%{transform:translateY(-200%)}
+    45%{transform:translateY(-312%)}
+    55%{transform:translateY(-300%)}
+    65%{transform:translateY(-412%)}
+    75%{transform:translateY(-400%)}
+    85%{transform:translateY(-512%)}
+    100%{transform:translateY(-500%)}
+}
+.aside{
+    grid-area: aside;
+    background-image: url("images/motivacion.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.main{
+    grid-area: main;
+    background-image: url("images/box4.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.footer{
+    grid-area: footer;
+    background-image:url("images/palabracrosfit.jpg") ;  
+    color:beige
+}
+
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+        "nav-bar"
+        "header"
+        "aside"
+        "main"
+        "footer"
+        ;
+}
+.item1{
+    grid-area: item1;
+}
+.item2{
+    grid-area: item2;
+}
+.item3{
+    grid-area: item3;
+}
+.flex-container{
+    display: grid;
+    gap: 10px;
+    grid-template: 50% 50% / 50% 50%;
+    grid-template-areas: 
+        "item1 item2" 
+        ".  item3" 
+   
+; 
+}
+@media (min-width: 600px){
+    .grid-container{
+        display:grid;
+        grid-template: 50px 100px auto 100px / 300px auto ;
+        grid-template-areas: 
+            "nav-bar nav-bar" 
+            "header  header" 
+            "aside   main" 
+            "footer  footer" 
+        ;
+    }
+}
+
+@media (min-width: 900px){
+    .nav-bar {
+        background-color: rgba(177, 190, 190, 0.678);
+    }
+    .grid-container{
+        display:grid;
+        grid-template: 100px auto 100px / 200px auto 300px;
+        grid-template-areas: 
+            "header  header nav-bar " 
+            "main main  aside" 
+            "footer  footer footer" 
+        ;
+    
+    }
+}
+h3{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:antiquewhite
+}
+h4{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    color:whitesmoke;
+    text-decoration: underline;
+}
+
+p{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    color:whitesmoke;
+}
+.container-contacto{
+    display:flex;
+    min-height: 70px;
+    padding: 30px;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    
+}
+
+.enviar{
+    border-radius: 50px;
+    height: 50px;
+}
+
+.input{
+    border-radius: 50px;
+    height: 25px;
+    width: auto;
+    padding-left: 10px;
+
+}
+.enviar:hover{
+    background-color: black;;
+    color:#fff;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .container-contacto{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/mancuerna.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        letter-spacing: 2px;
+        padding: 50px;
+        height: 100%;
+
+    }
+    .formulario{
+        font-size: 20px;
+        opacity: 0.75;
+        letter-spacing: 6px;
+        color:white;
+        
+    }
+    
+
+}
+    
+@media (min-width: 768px) {
+    .container-contacto{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/crossfit2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        letter-spacing: 8px;
+        padding: 50px;
+        }
+        .formulario{
+            font-size: 20px;
+            opacity: 0.75;
+            letter-spacing: 6px;
+            color:white;
+    }
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* ////////////////////////////////PAGINA POWERLIFTING//////////////////////////////////////////////*/
+/* ////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* ///////////////////////////////////////////////////////////*/
+/* MAIN SECTION//////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////*/
+.main-section {
+    height: 100%;
+    width: 100%;
+    /* con background fixed dejamos fija la imagen de fondo para TODA la pagina */
+    background: fixed;
+    background-image: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)),
+      url("images/PLWALL.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+    background-position: center center;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .section {
+    height: 100%;
+    width: 100%;
+    background: fixed;
+    background-image: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)),
+      url("images/PLWALL.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .parrafo {
+    width: 100%;
+    padding: 0.5rem;
+    /* outline: 2px solid red; */
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: -2px 2px 2px black;
+    margin-bottom: 5rem;
+  }
+  
+  /* ///////////////////////////////////////////////////////////*/
+  /* POWERLIFTING//////////////////////////////////////////////*/
+  /* /////////////////////////////////////////////////////////*/
+  .division_powerlifting {
+    /* outline: 4px solid rgb(4, 0, 255); */
+    outline-offset: -4px;
+  }
+  
+  .contenedor_powerlifting {
+    /* outline: 4px solid red; */
+    padding: rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .texto-powerlifting {
+    height: 90%;
+    font-size: 40px;
+    color: aliceblue;
+    text-align: center;
+    padding: 20rem;
+  }
+  
+  .texto-powerlifting-shadow {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  
+  .imagen-power-lifting {
+    position: relative;
+    max-width: 430px;
+  }
+  
+  .imagen-power-lifting img {
+    width: 100%;
+  }
+  
+  /* ANIMACION TITULO POWERLIFTING */
+  .animacion_powerlifting {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+  
+        #626263 40%,
+        #ac0202 50%,
+        #ffffff 100%);
+  
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  
+  
+  /* ///////////////////////////////////////////////////////// */
+  /* MOVIMIENTOS///////////////////////////////////////////////*/
+  /* ///////////////////////////////////////////////////////// */
+  .division_movimientos {
+    /* outline: 4px solid orangered; */
+    width: 100%;
+    outline-offset: -4px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .contenedor_movimientos {
+    /* outline: 4px solid yellow; */
+    width: 50%;
+    padding: 1rem 1rem 7rem 2rem;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  
+  
+  /* ///////////////////////////////////////////////////////// */
+  /* CATEGORIAS/////////////////////////////////////////////// */
+  /* ///////////////////////////////////////////////////////// */
+  .division_categorias {
+    width: 100%;
+  }
+  
+  .contenedor_categorias {
+    /* outline: 4px solid yellow; */
+    padding: 0 1rem 7rem 2rem;
+    height: 0%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .texto-contenedores {
+    /* outline: 4px solid red; */
+    font-size: 40px;
+    font-size: 22px;
+    color: aliceblue;
+    text-align: center;
+  }
+  .hovercap {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .hovercap {
+    visibility: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .imagen-power-lifting:hover .hovercap {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  
+  
+  /* //////////////////////////////////////////////////////////*/
+  /* BOTON TOP////////////////////////////////////////////////*/
+  /* ////////////////////////////////////////////////////////*/
+  #botontop {
+    font-size: 20px;
+    position: fixed;
+    top: 48rem;
+    right: 3rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #botontop:hover {
+    background-color: #555;
+  }
+  
+  
+  
+  /* //////////////////////////////////////////////////////////*/
+  /* MEDIA QUERY TABLET///////////////////////////////////////*/
+  /* ////////////////////////////////////////////////////////*/
+  
+  @media (max-width: 800px) {
+    .animacion_powerlifting {
+      font-size: 50px;
+    }
+  
+    .contenedor_powerlifting {
+      padding: 4rem;
+      font-size: 30px;
+    }
+  
+    .contenedor_categorias {
+      padding: 0 1rem 2rem 1rem;
+    }
+  }
+  
+  
+  
+  /* //////////////////////////////////////////////////////////*/
+  /* MEDIA QUERY SMARTPHONES//////////////////////////////////*/
+  /* ////////////////////////////////////////////////////////*/
+  
+  @media (max-width: 500px) {
+  
+    /* SECCION POWERLIFTING */
+    .contenedor_powerlifting {
+      padding: 2rem;
+      font-size: 1.6rem;
+    }
+  
+    /* SECCION MOVIMIENTOS */
+    .division_movimientos {
+      flex-direction: column;
+    }
+  
+    .contenedor_movimientos {
+      width: 100%;
+      padding: 2rem;
+      padding-bottom: 6rem;
+    }
+  
+    .parrafo {
+      margin-bottom: 0rem;
+    }
+  x
+    .contenedor_categorias {
+  
+      padding: 0 2rem 2rem 2rem;
+    }
+  }
