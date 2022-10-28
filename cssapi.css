@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("comunidad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+    
+}
+
+H1{
+    font-size: 50PX;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:beige
+}
+h2{
+    font-size: 30PX;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:beige
+}
+div{
+    font-size: 30PX;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(5, 1, 12)
+}
